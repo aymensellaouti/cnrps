@@ -1,5 +1,6 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Personne} from '../Model/personne';
+import {LoggerService} from '../../services/logger.service';
 
 @Component({
   selector: 'app-detail',
@@ -8,9 +9,12 @@ import {Personne} from '../Model/personne';
 })
 export class DetailComponent implements OnInit {
   @Input() personne: Personne;
-  constructor() { }
+  constructor(
+    private loggerService: LoggerService
+  ) { }
 
   ngOnInit() {
+    this.loggerService.logger('cc je suis le détail');
   }
 
 }

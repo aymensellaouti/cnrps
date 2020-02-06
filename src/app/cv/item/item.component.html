@@ -1,7 +1,7 @@
 <li class="list-group-item"
   (click)="selectPersonne()"
 >
-  <img src="assets/images/{{personne.path}}" alt="{{personne.name}}"
+  <img src="assets/images/{{personne.path | defaultImage}}" alt="{{personne.name}}"
     width="50px"
     heith="50px"
     class="rounded-circle"
