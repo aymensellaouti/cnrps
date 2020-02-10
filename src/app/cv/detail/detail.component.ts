@@ -1,6 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {Personne} from '../Model/personne';
 import {LoggerService} from '../../services/logger.service';
+import {Router} from '@angular/router';
 
 @Component({
   selector: 'app-detail',
@@ -10,11 +11,15 @@ import {LoggerService} from '../../services/logger.service';
 export class DetailComponent implements OnInit {
   @Input() personne: Personne;
   constructor(
-    private loggerService: LoggerService
+    private loggerService: LoggerService,
+    private router: Router
   ) { }
 
   ngOnInit() {
     this.loggerService.logger('cc je suis le détail');
   }
 
+  goToDetail() {
+    this.router.navigate(['cv', this.personne.id]);
+  }
 }

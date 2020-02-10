@@ -5,13 +5,18 @@ import {ColorComponent} from './color/color.component';
 import {CvComponent} from './cv/cv/cv.component';
 import {DetailComponent} from './cv/detail/detail.component';
 import {TestRoutesParamsComponent} from './test-routes-params/test-routes-params.component';
+import {DetailPersonneComponent} from './cv/detail-personne/detail-personne.component';
+import {NF404Component} from './nf404/nf404.component';
 
 
 const routes: Routes = [
   {path: '', component: CvComponent},
+  {path: 'cv', redirectTo: '', pathMatch: 'full'},
+  {path: 'cv/:id', component: DetailPersonneComponent},
   {path: 'todo', component: TodoComponent},
   {path: 'color', component: ColorComponent},
-  {path: 'test/:name/:id', component: TestRoutesParamsComponent}
+  {path: 'test/:name/:id', component: TestRoutesParamsComponent},
+  {path: '**', component: NF404Component}
 ];
 
 @NgModule({

@@ -25,6 +25,7 @@ import { HeaderComponent } from './header/header.component';
 import { RouterSimulatorComponent } from './router-simulator/router-simulator.component';
 import { TestRoutesParamsComponent } from './test-routes-params/test-routes-params.component';
 import { DetailPersonneComponent } from './cv/detail-personne/detail-personne.component';
+import { NF404Component } from './nf404/nf404.component';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { DetailPersonneComponent } from './cv/detail-personne/detail-personne.co
     HeaderComponent,
     RouterSimulatorComponent,
     TestRoutesParamsComponent,
-    DetailPersonneComponent
+    DetailPersonneComponent,
+    NF404Component
   ],
     imports: [
         BrowserModule,

@@ -16,4 +16,10 @@ export class CvService {
   getPersonnes(): Personne[] {
     return this.personnes;
   }
+  getPersonneById(id) {
+    // 1 == '1'
+    return this.personnes.find(
+      (personne) => personne.id === +id
+    );
+  }
 }
