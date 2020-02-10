@@ -20,6 +20,7 @@ import { HighlightDirective } from './directives/highlight.directive';
 import { RainbowDirective } from './directives/rainbow.directive';
 import { DefaultImagePipe } from './pipes/default-image.pipe';
 import {LoggerService} from './services/logger.service';
+import { TodoComponent } from './todo/todo.component';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,8 @@ import {LoggerService} from './services/logger.service';
     NgclassExampleComponent,
     HighlightDirective,
     RainbowDirective,
-    DefaultImagePipe
+    DefaultImagePipe,
+    TodoComponent
   ],
     imports: [
         BrowserModule,
