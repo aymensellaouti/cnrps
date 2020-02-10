@@ -26,6 +26,7 @@ import { RouterSimulatorComponent } from './router-simulator/router-simulator.co
 import { TestRoutesParamsComponent } from './test-routes-params/test-routes-params.component';
 import { DetailPersonneComponent } from './cv/detail-personne/detail-personne.component';
 import { NF404Component } from './nf404/nf404.component';
+import { LoginComponent } from './login/login.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +52,8 @@ import { NF404Component } from './nf404/nf404.component';
     RouterSimulatorComponent,
     TestRoutesParamsComponent,
     DetailPersonneComponent,
-    NF404Component
+    NF404Component,
+    LoginComponent
   ],
     imports: [
         BrowserModule,

@@ -7,10 +7,12 @@ import {DetailComponent} from './cv/detail/detail.component';
 import {TestRoutesParamsComponent} from './test-routes-params/test-routes-params.component';
 import {DetailPersonneComponent} from './cv/detail-personne/detail-personne.component';
 import {NF404Component} from './nf404/nf404.component';
+import {LoginComponent} from './login/login.component';
 
 
 const routes: Routes = [
   {path: '', component: CvComponent},
+  {path: 'login', component: LoginComponent},
   {path: 'cv', redirectTo: '', pathMatch: 'full'},
   {path: 'cv/:id', component: DetailPersonneComponent},
   {path: 'todo', component: TodoComponent},
