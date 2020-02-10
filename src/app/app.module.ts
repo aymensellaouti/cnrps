@@ -21,6 +21,10 @@ import { RainbowDirective } from './directives/rainbow.directive';
 import { DefaultImagePipe } from './pipes/default-image.pipe';
 import {LoggerService} from './services/logger.service';
 import { TodoComponent } from './todo/todo.component';
+import { HeaderComponent } from './header/header.component';
+import { RouterSimulatorComponent } from './router-simulator/router-simulator.component';
+import { TestRoutesParamsComponent } from './test-routes-params/test-routes-params.component';
+import { DetailPersonneComponent } from './cv/detail-personne/detail-personne.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +45,11 @@ import { TodoComponent } from './todo/todo.component';
     HighlightDirective,
     RainbowDirective,
     DefaultImagePipe,
-    TodoComponent
+    TodoComponent,
+    HeaderComponent,
+    RouterSimulatorComponent,
+    TestRoutesParamsComponent,
+    DetailPersonneComponent
   ],
     imports: [
         BrowserModule,
