@@ -8,12 +8,15 @@ import {TestRoutesParamsComponent} from './test-routes-params/test-routes-params
 import {DetailPersonneComponent} from './cv/detail-personne/detail-personne.component';
 import {NF404Component} from './nf404/nf404.component';
 import {LoginComponent} from './login/login.component';
+import {AddPersonneComponent} from './cv/add-personne/add-personne.component';
+import {AuthGuardGuard} from './guards/auth-guard.guard';
 
 
 const routes: Routes = [
   {path: '', component: CvComponent},
   {path: 'login', component: LoginComponent},
   {path: 'cv', redirectTo: '', pathMatch: 'full'},
+  {path: 'cv/add', component: AddPersonneComponent, canActivate: [AuthGuardGuard]},
   {path: 'cv/:id', component: DetailPersonneComponent},
   {path: 'todo', component: TodoComponent},
   {path: 'color', component: ColorComponent},

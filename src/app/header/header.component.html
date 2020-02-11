@@ -12,6 +12,14 @@
            routerLinkActive="active"
         >Cv</a>
       </li>
+      <li
+        *ngIf="authService.isAutheticated()"
+        class="nav-item">
+        <a class="nav-link"
+          [routerLink]="['cv/add']"
+           routerLinkActive="active"
+        >Add Cv</a>
+      </li>
 <li class="nav-item">
         <a class="nav-link"
           [routerLink]="['todo']"
@@ -24,11 +32,20 @@
            [routerLink]="['color']"
         >Color</a>
       </li>
-      <li class="nav-item">
+      <li
+        *ngIf="!authService.isAutheticated()"
+        class="nav-item">
         <a class="nav-link"
            routerLinkActive="active"
            [routerLink]="['login']"
         >Login</a>
+      </li>
+      <li
+        *ngIf="authService.isAutheticated()"
+        (click)="logout()"
+        class="nav-item">
+        <a class="nav-link"
+        >Logout</a>
       </li>
     </ul>
   </div>

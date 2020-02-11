@@ -37,12 +37,9 @@ export class CvService {
     this.selectItemSubject.next(personne);
   }
   deletePersonne(id): Observable<any> {
-    const token = localStorage.getItem('token');
-    if (token) {
-      // const params = new HttpParams().set('access_token', token);
-      const headers = new HttpHeaders().set('Authorization', token);
-      return this.http.delete(API_LINK + id, {headers});
-    }
     return this.http.delete(API_LINK + id);
+  }
+  addPersonne(personne: Personne) {
+    return this.http.post(API_LINK, personne);
   }
 }
