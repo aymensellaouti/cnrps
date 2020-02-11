@@ -7,7 +7,11 @@ import {Observable} from 'rxjs';
   styleUrls: ['./observable-example.component.css']
 })
 export class ObservableExampleComponent implements OnInit {
-
+  sliderObservable: Observable<string>;
+  paths = [
+    '404.png', 'as.jpg', 'cv.png'
+  ];
+  path = 'as.jpg';
   constructor() {
   }
 
@@ -30,6 +34,22 @@ export class ObservableExampleComponent implements OnInit {
       },
       (erreur) => console.log(erreur),
       () => console.log('Fini :D')
+    );
+    this.sliderObservable =  new Observable<string>(
+      (observer) => {
+        let i = 0;
+        setInterval(
+          () => {
+             observer.next(this.paths[i++]);
+             if (i === this.paths.length) {
+               i = 0;
+             }
+          }, 1000
+        );
+      }
+    );
+    this.sliderObservable.subscribe(
+      (path) => this.path = path
     );
   }
 

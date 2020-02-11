@@ -2,9 +2,9 @@
   {{date|date|uppercase}}
 </div>
 <ol class="list-group">
+  <!--    (sendPersonne)="forwardPersonne($event)"-->
   <app-item
     *ngFor="let personne of personnes"
-    (sendPersonne)="forwardPersonne($event)"
     [personne]="personne"
   ></app-item>
 </ol>
