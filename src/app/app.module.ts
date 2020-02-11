@@ -28,6 +28,8 @@ import { DetailPersonneComponent } from './cv/detail-personne/detail-personne.co
 import { NF404Component } from './nf404/nf404.component';
 import { LoginComponent } from './login/login.component';
 import { ObservableExampleComponent } from './observable-example/observable-example.component';
+import {HttpClientModule} from '@angular/common/http';
+import { HttpExamplesComponent } from './http-examples/http-examples.component';
 
 @NgModule({
   declarations: [
@@ -55,12 +57,14 @@ import { ObservableExampleComponent } from './observable-example/observable-exam
     DetailPersonneComponent,
     NF404Component,
     LoginComponent,
-    ObservableExampleComponent
+    ObservableExampleComponent,
+    HttpExamplesComponent
   ],
     imports: [
         BrowserModule,
         AppRoutingModule,
-        FormsModule
+        FormsModule,
+        HttpClientModule
     ],
   providers: [],
   bootstrap: [AppComponent]
