@@ -30,6 +30,7 @@ import { LoginComponent } from './login/login.component';
 import { ObservableExampleComponent } from './observable-example/observable-example.component';
 import {HttpClientModule} from '@angular/common/http';
 import { HttpExamplesComponent } from './http-examples/http-examples.component';
+import { AddPersonneComponent } from './cv/add-personne/add-personne.component';
 
 @NgModule({
   declarations: [
@@ -58,7 +59,8 @@ import { HttpExamplesComponent } from './http-examples/http-examples.component';
     NF404Component,
     LoginComponent,
     ObservableExampleComponent,
-    HttpExamplesComponent
+    HttpExamplesComponent,
+    AddPersonneComponent
   ],
     imports: [
         BrowserModule,

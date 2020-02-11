@@ -15,7 +15,15 @@ export class ListComponent implements OnInit {
   ) { }
   date = new Date();
   ngOnInit() {
-    this.personnes = this.cvService.getPersonnes();
+    this.cvService.getPersonnes().subscribe(
+      (personnes) => {
+        this.personnes = personnes;
+      },
+      (erreur) => {
+        this.personnes = this.cvService.getFakePersonnes();
+        alert(`Problème de connexions les donnèes sont fictives :(`);
+      }
+    );
   }
 
   // forwardPersonne(personne: Personne) {

@@ -19,14 +19,21 @@ export class DetailPersonneComponent implements OnInit {
   ngOnInit() {
     this.activatedRoute.params.subscribe(
       (mesParams) => {
-        const personne = this.cvService.getPersonneById(mesParams.id);
-        if (personne) {
-          this.personne = personne;
-        } else {
-          this.router.navigate(['']);
-        }
+        this.cvService.getPersonneById(mesParams.id).subscribe(
+          (personne) => this.personne = personne,
+          (erreur) => this.router.navigate([''])
+        );
       }
     );
   }
 
+  deletePersonne() {
+    this.cvService.deletePersonne(this.personne.id).subscribe(
+      (reponse) => {
+        console.log(reponse);
+        this.router.navigate(['']);
+      },
+      (errur) => console.log(errur)
+    );
+  }
 }
