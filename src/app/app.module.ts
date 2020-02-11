@@ -27,6 +27,7 @@ import { TestRoutesParamsComponent } from './test-routes-params/test-routes-para
 import { DetailPersonneComponent } from './cv/detail-personne/detail-personne.component';
 import { NF404Component } from './nf404/nf404.component';
 import { LoginComponent } from './login/login.component';
+import { ObservableExampleComponent } from './observable-example/observable-example.component';
 
 @NgModule({
   declarations: [
@@ -53,7 +54,8 @@ import { LoginComponent } from './login/login.component';
     TestRoutesParamsComponent,
     DetailPersonneComponent,
     NF404Component,
-    LoginComponent
+    LoginComponent,
+    ObservableExampleComponent
   ],
     imports: [
         BrowserModule,
